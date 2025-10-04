@@ -1,0 +1,13 @@
+name: "linting"
+on: push
+
+jobs:
+  lint:
+    runs-on: ubuntu_latest
+    steps:
+      - name: Get Code
+        run: actions/checkout@v3
+      - name: Setup environment
+        uses: actions/setup-node@v4
+      - name: Run Linting Rules
+        run: redocly lint src/OpenAPI.yaml
