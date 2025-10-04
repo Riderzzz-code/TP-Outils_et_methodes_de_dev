@@ -5,7 +5,7 @@ FROM  redocly/cli AS redocly
 WORKDIR /usr/src/app
 
 # Copy the openapi file
-COPY OpenAPI.yaml .
+COPY src/OpenAPI.yaml .
 
 # Generate an HTML File
 RUN redocly build-docs OpenAPI.yaml --output=index.html
