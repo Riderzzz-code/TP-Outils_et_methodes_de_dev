@@ -9,5 +9,7 @@ jobs:
         run: actions/checkout@v3
       - name: Setup environment
         uses: actions/setup-node@v4
+      - name: install redocly/cli
+        run: npm i -g @redocly/cli@latest
       - name: Run Linting Rules
         run: redocly lint src/OpenAPI.yaml
