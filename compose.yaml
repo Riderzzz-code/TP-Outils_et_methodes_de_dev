@@ -1,0 +1,8 @@
+services:
+  redocly:
+    build:
+      dockerfile: Dockerfile
+    develop:
+      watch:
+        - action: rebuild
+          path: ./src
